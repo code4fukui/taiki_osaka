@@ -15,7 +15,9 @@ jobs:
         with:
           deno-version: v1.x
       - name: fetch
-        run: deno run -A downloadLatest.js
+        run: |
+          deno run -A downloadLatest.js
+          deno run -A makeData.js
       - name: commit and push
         run: |
           git config --global user.email "workflow@example.com"
