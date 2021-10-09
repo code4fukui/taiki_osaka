@@ -1,0 +1,428 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+
+<script type="text/javascript" charset="utf-8" src="json2.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+<!-- 2012.09.12 IE6とそれ以上のバージョンでスクロール有無を条件分け -->
+<!--[if !IE]><!-->
+<link rel="stylesheet" href="/taikiWebApp/bin/common/css/form6.css" type="text/css" />
+<!--<![endif]-->
+<!--[if gte IE 8]>
+<link rel="stylesheet" href="/taikiWebApp/bin/common/css/form.css" type="text/css" />
+<![endif]-->
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="/taikiWebApp/bin/common/css/form6.css" type="text/css" />
+<![endif]-->
+<!-- 2012.09.12 IE6とそれ以上のバージョンでスクロール有無を条件分け -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>1021 時報 データ表示</title>
+</head>
+
+<body>
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<style type="text/css">
+<!--
+#backButton,#closeButton {
+display: none;
+}
+
+-->
+</style>
+<title>ヘッダーボタン</title>
+</head>
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+
+<input type="hidden"  id="CTRL_NO_020" value="020" />
+
+<table>
+<tr><td colspan="2">大阪府大気環境常時監視システム</td></tr>
+<tr>
+<td><input id="backButton" type="button" value="1つ前に戻る"  onclick="javascript:history.go(-1)" /></td>
+<td><input id="closeButton" type="button" value="閉じる"  onclick="javascript:window.close(); return true;" /></td>
+</tr>
+</table>
+<SCRIPT type="text/javascript"><!--
+if ($('#FORM_NO_2113').size() != 0)
+{
+	$('#closeButton').show();
+}
+else
+{
+	$('#backButton').show();
+}
+//--></SCRIPT>
+
+
+
+
+<form action="/taikiWebApp/MainLogic" method="POST">
+
+<input type="hidden" name="formNo" id="formNo" value="1021" />
+
+<input type="hidden" name="nextForm" id="nextForm" value="/bin/form1000/Form_1021.jsp" />
+
+<input type="hidden" name="dataInfo" id="dataInfo" value={"areaName":null,"areaNumber":null,"browseEnd":0,"browsePriod":"168","browseStart":0,"buttonType":null,"changeType":null,"cmbType":null,"dailyRreport":null,"dayAdd":"168","endDate":"2021/10/09","endHour":"06","endMin":null,"formNo":0,"graphName":null,"id":"0","itemInfo":[["009"],["OX"],["ppb"]],"itemName":null,"kenteiType":null,"markStationItem":"0104_009,0107_009,0109_009,0112_009,0115_009,0116_009,0117_009,0118_009,0120_009,0121_009,0122_009,0123_009,0124_009,0125_009,0127_009,0129_009,0130_009,0131_009,0133_009,0202_009,0203_009,0205_009,0206_009,0207_009,0208_009,0209_009,0210_009,0211_009,0212_009,0213_009,0215_009,0252_009,0301_009,0302_009,0304_009,0305_009,0307_009,0309_009,0311_009,0312_009,0313_009,0405_009,0602_009,0651_009,0652_009,0701_009,0703_009,0705_009,0801_009,0802_009,0851_009,0901_009,0902_009,0903_009,2102_009,2103_009,2202_009,2301_009,2302_009,","maxId":"1","maxItemString":"","startDate":"2021/10/02","startHour":"06","startMin":null,"stationCodeOfArea":null,"stationInfo":[["0104","0107","0109","0112","0115","0116","0117","0118","0120","0121","0122","0123","0124","0125","0127","0129","0130","0131","0133","0202","0203","0205","0206","0207","0208","0209","0210","0211","0212","0213","0215","0252","0301","0302","0304","0305","0307","0309","0311","0312","0313","0405","0602","0651","0652","0701","0703","0705","0801","0802","0851","0901","0902","0903","2102","2103","2202","2301","2302"],["西部コミュニティセンター","国設大阪","茨木市役所","高石中学校","池田市立南畑会館","大東市役所","府立修徳学院","貝塚市消防署","島本町役場","富田林市役所","南海団地","泉南市役所","緑ケ丘小学校","三日市公民館","藤井寺市役所","岸和田中央公園","佐野中学校","泉大津市役所","豊能町役場","此花区役所","平尾小学校","野中小学校","桃谷中学校","大宮中学校","聖賢小学校","清江小学校","摂陽中学校","今宮中学校","九条南小学校","茨田北小学校","南港中央公園","出来島小学校","少林寺","浜寺","三宝","若松台","石津","登美丘","深井","美原","金岡南","高石消防署高師浜出張所","豊中市千成","豊中市千里","豊中市役所","吹田市垂水","吹田市北消防署","吹田市高野台","東大阪市西保健センター","東大阪市六万寺","東大阪市環境衛生検査センター","楠葉","枚方市役所","王仁公園","高槻北","庄所","八尾市保健所","成田","寝屋川市役所"]],"stationNames":null,"timeSpan":null} />
+
+<table border=0 cellspacing=0 >
+	<tr><td id="formTitle">時報 データ表示</td></tr>
+</table>
+
+<table><tr><td width="24" height="24" ><br></td><td><div id="loader"><img src="bin/img/icon-loadinfo.gif" width="24" height="24" /></div></td></tr></table>
+<table id="datatable" border="0" cellspacing="0"  class ="headTbl" >
+<tr>
+<td><input type="text" value="" readonly id ="viewDay"  size="22"  class='headTxt' ></td>
+<td><input id="buttonYes" type="button" value=" 1時間前"  style="WIDTH: 80px" /></td>
+<td><input id="buttonTom" type="button" value=" 1時間後"  style="WIDTH: 80px" /></td>
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+<title>ボタン一覧</title>
+</head>
+
+<BODY topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+<input type="hidden"  id="CTRL_NO_040" value="040" />
+
+<input type="hidden" name="parentFormNo" id="parentFormNo" value="" />
+
+<td>&nbsp;&nbsp;</td>
+<td><input id="040btnCsv" type="button" value="CSV出力"  style="WIDTH: 100px" /></td>
+
+<SCRIPT type="text/javascript">
+<!--
+
+
+$("#parentFormNo").val( $("#formNo").val() );
+
+
+$("#040btnCsv").click(function () {
+	$("#formNo").val($("#CTRL_NO_040").val());
+	$("form").submit();
+	$("#formNo").val($("#parentFormNo").val());
+});
+
+//-->
+</SCRIPT>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+</tr></table>
+
+<!-- 2012.08.22 M.Sugimoto Start -->
+<table id="datatable2" border="0" cellspacing="0"></table>
+<br>
+<!--[if !IE]><!-->
+<table border="0" cellspacing="0" id="viewTable" ></table>
+<!--<![endif]-->
+
+<!--[if lte IE 7]>
+<table border="0" cellspacing="0" id="viewTable" ></table>
+<![endif]-->
+
+<!-- 2012.09.12 IE6とそれ以上のバージョンでスクロール有無を条件分け -->
+<!-- 2012.10.09 T.Osako 結果画面の幅調整 -->
+<!--[if gte IE 8]>
+<table border="0" cellspacing="0" id="tableHead"></table>
+<table cellspacing="0" cellpadding="0" >
+<thead>
+	<tr valign = "bottom">
+	    <th style="overflow:hidden; width:160px; height:45px; padding:0px; margin:0px;">
+			<table border="0" cellspacing="0" id="displayHead" ></table>
+		</th>
+		<td>
+			<div id="trow" style="overflow:hidden; width:1165px;">
+				<table  border="0" cellspacing="0" id="displayItem" padding:0px; margin:0px;"></table>
+			</div>
+		</td>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>
+	    	<div id="tcol" style="overflow: hidden; width:160px; height: 300px; ">
+				<table border="0" cellspacing="0" id="displaySt" padding:0px; margin:0px;"></table>
+			</div>
+	    </td>
+    	<td>
+	    	<div onScroll="scrollRC()" id="tbody" style="overflow:scroll; width:1182px; height:300px; padding:0px; margin:0px;">
+				<table  id="display" ></table>
+			</div>
+		</td>
+	</tr>
+</tbody>
+</table>
+<![endif]-->
+</form>
+
+
+
+<script type="text/javascript">
+<!--
+
+$('#itemSelect').hide();
+
+sData = JSON.parse($('#dataInfo').val());
+try
+{
+if( sData.browsePriod != 0)
+{
+	if(sData.browsePriod == sData.dayAdd ){ $("#buttonTom").attr('disabled', true); }
+	if( 0 == sData.dayAdd ){ $("#buttonYes").attr('disabled', true); }
+}
+}
+catch(e)
+{
+
+	$('body').empty();
+	$('head').empty();
+	location.href="/taikiWebApp/error/error.html";
+}
+
+
+$(document).ready(function () {
+
+	//UPD 2017/06/02 S.Yamamoto Start
+    //alert(sData.dayAdd);
+	//UPD 2017/06/02 S.Yamamoto End
+	viewReport();
+
+});
+
+
+function viewReport() {
+$(function(){
+	try{
+
+		//UPD 2017/06/02 S.Yamamoto Start
+	    //alert(sData.dayAdd);
+		//UPD 2017/06/02 S.Yamamoto End
+		$('#dataInfo').val(  JSON.stringify(sData) );
+
+		$.ajaxSetup({scriptCharset:'utf-8'});
+		$.ajaxSetup({ cache: false });
+
+		$.post(	"/taikiWebApp/MainLogic"
+				,{
+				   formNo   : $("#formNo").val()
+			      ,dataInfo : $("#dataInfo").val()
+			     }
+				,function(data){
+
+					try{
+						// ADD S.Urabe 2012/08/23 Start 検定切れ対応ボタン制御処理
+						$("#buttonYes").attr('disabled', data.buttonBefore);
+						$("#buttonTom").attr('disabled', data.buttonAfter);
+						// ADD S.Urabe 2012/08/23 End 検定切れ対応ボタン制御処理
+						$("#viewDay").val(data.today + " 時");
+					} catch (e){
+						//alert((e.number & 0xffff) + " h: " +e.description);
+					}
+
+					try{
+
+						var msie=navigator.appVersion.toLowerCase();
+						msie=(msie.indexOf('msie')>-1)?parseInt(msie.replace(/.*msie[ ]/,'').match(/^[0-9]+/)):0;
+//						var htmHead ="<thead><tr><td><caption class='cap'>"+$("#viewDay").val()+"</caption></td></tr>";
+//						htmlHead += "<tr><th class='s003t'>&nbsp;</th></tr><tr><th class='s003t'>局名</th></tr>";
+
+						//if(msie >= 7) {
+						if(ie >= 8) {
+							<!-- 2012.09.06 T.Osako Start -->
+							var tableHead = "<tr><td class='cap'>" +$("#viewDay").val()+"</td></tr>";
+							$("#tableHead").html( tableHead );
+							<!-- 2012.09.06 T.Osako End -->
+
+							var htmlHead = "<tr><th class='s003t'>&nbsp</th></tr><tr><th class='s003t'>局名</th></tr>";
+							$("#displayHead").html( htmlHead );
+
+							var htmlItem = "<tr>";
+							for(var i in data.headItem ){
+								if(i >0) {
+									htmlItem += "<th class='s003th'>" + data.headItem[i] + "</th>";
+								}
+							}
+							htmlItem += "</tr><tr>";
+							for(var i in data.headUnit){
+								if(i >0) {
+									htmlItem += "<th class='s003th'>" + data.headUnit[i] + "</th>";
+								}
+							}
+							$("#displayItem").html( htmlItem );
+
+							var htmlSt = "<tr>";
+							var htm = "";
+							for(var i in data.strDailyRreport){
+								htm += "<tr>";
+								for(var j in data.strDailyRreport[0] ){
+									if( j == 0 ){
+										htmlSt += "<th class='s003th'>" + data.strDailyRreport[i][j] + "</th>";
+									} else {
+										htm += "<td class='s003td'>" + data.strDailyRreport[i][j] + "</td>";
+									}
+								}
+								htm += "</tr>";
+								htmlSt += "</tr>";
+							}
+							htmlSt += "<tr><td class='s003none'>&nbsp;</td></tr>";
+							$("#displaySt").html( htmlSt );
+							$("#display").html( htm );
+
+
+							//テーブル幅の調整
+							var body = document.getElementById("display");
+							body.width = 67 * j;
+							var item = document.getElementById("displayItem");
+							item.width = 67 * j;
+
+						} else {
+
+							var htm="<caption class='cap'>"+$("#viewDay").val()+"</caption>";
+							htm +="<tr>";
+							for(var i in data.headItem ){
+								htm += "<th>" + data.headItem[i] + "</th>";
+							}
+							htm += "</tr><tr>";
+
+							for(var i in data.headUnit){
+								htm += "<th>" + data.headUnit[i] + "</th>";
+							}
+							htm += "</tr>";
+
+							for(var i in data.strDailyRreport){
+								htm += "<tr>";
+								for(var j in data.strDailyRreport[0] ){
+									if( j == 0 ){ htm += "<td class='head'>" + data.strDailyRreport[i][j] + "</td>"; }
+									else { htm += "<td>" + data.strDailyRreport[i][j] + "</td>"; }
+								}
+								htm += "</tr>";
+							}
+
+							$("#viewTable").html( htm );
+
+						}
+
+					} catch (e){
+						//alert((e.number & 0xffff) + " b: " + e.description);
+					}
+
+		},"json");
+
+	} catch (e){
+		//alert((e.number & 0xffff) + " a: " + e.description);
+	}
+});
+
+}
+
+
+function scrollRC()
+{
+  document.getElementById('trow').scrollLeft
+        = document.getElementById('tbody').scrollLeft;
+  document.getElementById('tcol').scrollTop
+        = document.getElementById('tbody').scrollTop;
+}
+
+
+
+$(function() {
+	$('#loader')
+	.ajaxStart(function() {
+		$(this).show();
+	})
+	.ajaxStop(function() {
+		$(this).hide();
+	});
+});
+
+
+$("#buttonYes").click(function () {
+
+	sData.dayAdd --;
+	//UPD 2017/06/02 S.Yamamoto Start
+	//alert(sData.dayAdd);
+	//UPD 2017/06/02 S.Yamamoto End
+	if( sData.browsePriod != 0)
+	{
+		$("#buttonTom").removeAttr('disabled');
+		if( sData.dayAdd <= 0 ){ sData.dayAdd  = 0; $("#buttonYes").attr('disabled', true); }
+	}
+	viewReport();
+});
+
+
+$("#buttonTom").click(function () {
+
+	sData.dayAdd ++;
+	//UPD 2017/06/02 S.Yamamoto Start
+	//alert(sData.dayAdd);
+	//UPD 2017/06/02 S.Yamamoto End
+	if( sData.browsePriod != 0)
+	{
+		$("#buttonYes").removeAttr('disabled');
+		if(sData.browsePriod <= sData.dayAdd ){ sData.dayAdd = sData.browsePriod; $("#buttonTom").attr('disabled', true); }
+	}
+	viewReport();
+});
+
+var ie = (function(){
+
+ var undef, v = 3, div = document.createElement('div');
+
+ while (
+  div.innerHTML = '<!--[if gt IE '+(++v)+']><I></I><![endif]-->',
+  div.getElementsByTagName('i')[0]
+ );
+ return v> 4 ? v : undef;
+}());
+
+
+//-->
+</script>
+
+
+</body>
+</html>
+
